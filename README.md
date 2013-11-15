@@ -3,7 +3,7 @@ Diablo 3 Profile X
 
 An effort to improve the Diablo 3 profile browsing experience.
 
-![alt='promo.jpg'](/promo.jpg)
+![alt='promo.jpg'](promo.jpg)
 
 _______________
 
