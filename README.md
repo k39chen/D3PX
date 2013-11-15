@@ -5,6 +5,16 @@ An effort to improve the Diablo 3 profile browsing experience.
 
 ![alt='promo.jpg'](promo.jpg)
 
+Features
+------------
+
++ Simple and clean interface through which to digest profile information
++ Easy-to-use battletag search bar with a server/region dropdown (currently supports US/EU/KR/TW servers)
++ Displays D3 heroes in a carousel with Level/Paragon Level, Class, Hardcore info
++ Presents chart data on class preference by hero playtime and primary hero by career kills
++ Pays respect to Fallen Heroes and traces hardcore death history in a timeline
++ Tracks storyline progression in both softcore and hardcore modes
+
 Usage
 ------------
 
@@ -18,3 +28,7 @@ Actively using the [Diablo 3 API](http://blizzard.github.io/d3-api-docs/) and in
 License
 -------------
 Copyright (c) 2013 Kevin Chen.
+
+
+_______________
+**Due to drastic changes to core gameplay in Diablo 3, features presented with this project will become irrelevant upon release of the expansion. As a result, development and support of this project will be discontinued.**
