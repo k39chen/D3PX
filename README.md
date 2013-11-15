@@ -1,7 +1,7 @@
 Diablo 3 Profile X
 ======================
 
-An effort to improve the Diablo 3 profile browsing experience.
+An effort to improve the Diablo 3 profile browsing experience. [Try it now](http://htmlpreview.github.io/?https://github.com/k39chen/D3PX/blob/master/index.html)!
 
 ![alt='promo.jpg'](promo.jpg)
 
