@@ -1,0 +1,12 @@
+.notificationbar {
+	background: rgb(100,100,100);
+	text-align: center;
+	padding: 0px;
+	color: rgb(255,255,255);
+	font-size: 20px;
+	z-index: 2000;
+	width: 100%;
+}
+.notificationbar .content {
+	padding: 24px 0px;
+}

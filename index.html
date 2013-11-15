@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<!--
+	GummyPower#1650
+	Morogoth#1321
+	Twhirlwind#1755
+	Alkaizer#1727
+	Jxl#1801
+	-->
+
+	<head>
+	
+		<title>Diablo 3 Profile X</title>
+		
+		<!-- Third-party libraries -->
+		<script type="text/javascript" src= "lib/jquery.js"></script>
+		<script type="text/javascript" src= "lib/jquery.ui.js"></script>
+		<script type="text/javascript" src= "lib/jquery.easing.js"></script>
+		<script type="text/javascript" src= "lib/raphael.js"></script>
+		<script type="text/javascript" src= "lib/sortable.js"></script>
+		<script type="text/javascript" src= "lib/FileSaver.js"></script>
+		<script type="text/javascript" src= "lib/BlobBuilder.js"></script>
+	
+		<!-- Functional scripts-->
+		<script type="text/javascript" src="js/d3.js"></script>
+		<script type="text/javascript" src="js/utils.js"></script>
+		<script type="text/javascript" src="js/notificationbar.js"></script>
+		<script type="text/javascript" src="js/searchBar.js"></script>
+		<script type="text/javascript" src="js/boutique.js"></script>
+		<script type="text/javascript" src="js/boutiqueItem.js"></script>
+		<script type="text/javascript" src="js/pie.js"></script>
+		<script type="text/javascript" src="js/timeline.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	
+		<!-- Fonts -->
+		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.ui.css" />
+		<link rel="stylesheet" type="text/css" href="css/macros.css" />
+		<link rel="stylesheet" type="text/css" href="css/spritesheets.css" />
+		<link rel="stylesheet" type="text/css" href="css/notificationbar.css" />
+		<link rel="stylesheet" type="text/css" href="css/searchBar.css" />
+		<link rel="stylesheet" type="text/css" href="css/boutique.css" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		
+	</head>
+	
+	<body>
+	
+		<div id="header">
+			<div class="content">
+				<div class="logo"><lt>D3</lt><b>PX</b></div>
+				<div id="searchBar"></div>
+			</div>
+		</div>
+		
+		<div id="notificationbar"></div>
+	
+		<div id="splash">
+			<div class="mask"></div>
+			<div class="content">
+				<div class="animatedText">
+					<div class="heroText">Welcome to <lt>D<span class="collapsible">iablo&nbsp;</span>3</lt><span class="collapsible">&nbsp;</span><b>P<span class="collapsible">rofile&nbsp;</span>X</b></div>
+					<div class="sidekickText">A simply elegant way to review Diablo 3 player and hero profiles.</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="titlebar" class="section">
+			<div class="content">
+				<div class="server"></div>
+				<div class="battletag"></div>
+			</div>
+		</div>
+		
+		<div id="sectionHeroes" class="section">
+			<div class="content">
+				<h1>Heroes</h1>
+				<div class="info">
+					<div id="heroBoutiqueContainer"></div>
+				</div>
+			</div>
+		</div>
+	
+		<div id="sectionStatistics" class="section">
+			<div class="content">
+				<h1>Statistics</h1>
+				<div class="info">
+					<div id="timePlayedContainer" class="statContainer wrapper">
+						<h2>Playtime by Class</b></h2>
+						<div id="timePlayedChart" class="pieChart left"></div>
+						<div class="statsGroup wrapper left"></div>
+					</div>
+					<div class="vspace"></div>
+					<div id="killCountContainer" class="statContainer wrapper">
+						<h2>Career Kills</b></h2>
+						<div class="statsGroup left tright wrapper">
+							<div class="stat"><div class="label">LIFETIME KILLS</div><div id="lifetimeKills" class="value"></div></div>
+							<div class="stat"><div class="label">TOTAL ELITE KILLS</div><div id="eliteKills" class="value"></div></div>
+							<div class="stat last"><div class="label">HARDCORE MONSTER KILLS</div><div id="hardcoreKills" class="value"></div></div>
+						</div>
+						<div id="killCountChart" class="pieChart left"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="sectionFallenHeroes" class="section">
+			<div class="content">
+				<h1>Fallen Heroes</h1>
+				<div class="info">
+					<div id="fallenHeroesTimeline" class="timeline"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="sectionProgression" class="section">
+			<div class="content">
+				<h1>Progression</h1>
+				<div class="info">
+					<div class="progressionGroup">
+						<div id="regularProgressionPct" class="stat"></div>
+						<div id="regularProgressionQuests" class="stat"></div>
+						<div id="regularProgressionChart" class="pieChart"></div>
+					</div>
+					<div class="progressionGroup">
+						<div id="hardcoreProgressionPct" class="stat"></div>
+						<div id="hardcoreProgressionQuests" class="stat"></div>
+						<div id="hardcoreProgressionChart" class="pieChart"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+
+</html>

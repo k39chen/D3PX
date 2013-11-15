@@ -1,0 +1,57 @@
+.portrait {
+	overflow: hidden;
+	border: solid 4px rgb(200,200,200);
+}
+.portrait.hardcore {
+	border-color: rgb(224,67,67);
+}
+.portrait.lg {
+	width: 130px;
+	height: 130px;
+	background: url(../assets/images/portraits-lg.jpg);
+	border-width: 4px;
+}
+.portrait.sm {
+	width: 66px;
+	height: 66px;
+	background: url(../assets/images/portraits-sm.jpg);
+	border-width: 4px;
+}
+.portrait.xsm {
+	width: 32px;
+	height: 32px;
+	background: url(../assets/images/portraits-xsm.jpg);
+	border-width: 3px;
+}
+.portrait.lg.barbarian.Male { background-position: -32px 0px; }
+.portrait.lg.barbarian.Female { background-position: -203px 0px; }
+.portrait.lg.demon-hunter.Male { background-position: -29px -128px; }
+.portrait.lg.demon-hunter.Female { background-position: -188px -128px; }
+.portrait.lg.monk.Male { background-position: -30px -259px; }
+.portrait.lg.monk.Female { background-position: -189px -260px; }
+.portrait.lg.witch-doctor.Male { background-position: -25px -392px; }
+.portrait.lg.witch-doctor.Female { background-position: -198px -386px; }
+.portrait.lg.wizard.Male { background-position: -38px -518px; }
+.portrait.lg.wizard.Female { background-position: -193px -518px; }
+
+.portrait.sm.barbarian.Male { background-position: -11px 0px; }
+.portrait.sm.barbarian.Female { background-position: -92px 0px; }
+.portrait.sm.demon-hunter.Male { background-position: -10px -66px; }
+.portrait.sm.demon-hunter.Female { background-position: -92px -66px; }
+.portrait.sm.monk.Male { background-position: -10px -135px; }
+.portrait.sm.monk.Female { background-position: -92px -135px; }
+.portrait.sm.witch-doctor.Male { background-position: -10px -203px; }
+.portrait.sm.witch-doctor.Female { background-position: -92px -198px; }
+.portrait.sm.wizard.Male { background-position: -15px -266px; }
+.portrait.sm.wizard.Female { background-position: -92px -266px; }
+
+.portrait.xsm.barbarian.Male { background-position: -7px 0px; }
+.portrait.xsm.barbarian.Female { background-position: -45px 0px; }
+.portrait.xsm.demon-hunter.Male { background-position: -5px -31px; }
+.portrait.xsm.demon-hunter.Female { background-position: -45px -31px; }
+.portrait.xsm.monk.Male { background-position: -5px -65px; }
+.portrait.xsm.monk.Female { background-position: -45px -65px; }
+.portrait.xsm.witch-doctor.Male { background-position: -5px -97px; }
+.portrait.xsm.witch-doctor.Female { background-position: -45px -97px; }
+.portrait.xsm.wizard.Male { background-position: -8px -128px; }
+.portrait.xsm.wizard.Female { background-position: -45px -128px; }

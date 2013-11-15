@@ -1,0 +1,266 @@
+/*
+ * === PRIMITIVE STYLES ===
+ */
+html {
+	font-size: 16px;
+	font-family: HelveticaNeueLt;
+	height: 100%;
+}
+body {
+	color: rgb(150,150,150);
+	height: 100%;
+}
+button {
+	background: rgb(236,158,40);
+	color: rgb(255,255,255);
+	border: none;
+	padding: 8px 12px;
+	font-family: HelveticaNeueBd;
+	cursor: pointer;
+}
+button.tiny {
+	font-family: HelveticaNeueLt;
+	padding: 4px 8px;
+}
+button:hover {
+	background: rgb(238,177,84);
+}
+b {
+	font-family: HelveticaNeueBd;
+}
+
+/*
+ * === GENERAL STYLES ===
+ */
+.label {
+	margin-bottom: 3px;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-family: HelveticaNeue;
+	color: rgb(200,200,200);
+}
+.value {
+	font-size: 32px;
+	color: rgb(70,70,70);
+}
+.ui-tooltip {
+	font-family: HelveticaNeue;
+	font-size: 13px;
+	border-radius: 0px;
+	border: solid 1px rgb(236,158,40);
+	box-shadow: none;
+}
+
+/*
+ * === LAYOUT ===
+ */
+.section {
+	width: 100%;
+}
+.section h1 {
+	text-align: center;
+	font-size: 32px;
+	font-family: HelveticaNeueLt;
+	text-shadow: 1px 1px 1px rgb(255,255,255);
+	color: rgb(49,52,59);
+	margin-bottom: 64px;
+}
+.section h2 {
+	font-size: 24px;
+	font-family: HelveticaNeueLt;
+	color: rgb(90,90,90);
+	margin-bottom: 48px;
+	
+	text-align: center;
+}
+.content {
+	width: 964px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 48px 0px 64px 0px;
+}
+.content .info {
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/*
+ * === HEADER ===
+ */
+#header {
+	border-top: solid 4px rgb(236,158,40);
+	color: rgb(0,0,0);
+	height: 80px;
+}
+#header .content {
+	padding: 24px 0px;
+}
+.logo { font-size: 32px; float: left; cursor: pointer; }
+.logo lt { font-family: HelveticaNeueLt; color: rgb(110,110,110); }
+.logo b { font-family: HelveticaNeueBd; color: rgb(60,60,60); }
+
+/*
+ * === SPLASH ===
+ */
+#splash {
+	width: 100%;
+	height: 560px;
+	background-position: center;
+	background-image: url(../assets/images/splash.jpg);
+	background-repeat: no-repeat;
+	background-size: 1912px 560px;
+	position: relative;
+	overflow: hidden;
+}
+#splash .mask {
+	width: 100%;
+	height: 560px;
+	background-position: center;
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url(../assets/images/splashMask.jpg);
+	background-repeat: no-repeat;
+	background-size: 1912px 560px;
+}
+#splash .content { position: absolute; top: 0px; left: 0px; }
+#splash .animatedText {margin-top: 265px;}
+#splash .animatedText lt { font-family: HelveticaNeueLt; color: rgb(196,196,196); }
+#splash .animatedText b { font-family: HelveticaNeueBd; color: rgb(255,255,255); }
+#splash .animatedText .heroText {
+	color: rgb(196,196,196);
+	font-size: 64px;
+	margin-bottom: 16px;
+}
+#splash .animatedText .sidekickText {
+	font-size: 16px;
+	font-family: HelveticaNeueBd;
+	color: rgb(172,172,172);
+}
+
+/*
+ * === TITLEBAR ===
+ */
+#titlebar {
+	background: rgb(35,37,44);
+	text-align: center;
+	padding: 0px;
+	padding-bottom: 12px;
+}
+#titlebar .content {
+	padding: 24px 0px;
+}
+#titlebar .battletag {
+	font-size: 32px;
+	color: rgb(255,255,255);
+}
+#titlebar .server {
+	font-size: 11px;
+	text-transform: uppercase;
+	color: rgb(90,90,90);
+	margin-bottom: 4px;
+	font-family: HelveticaNeueBd;
+}
+
+/*
+ * === SECTIONS ===
+ */
+ 
+/*
+ * --- HEROES ---
+ */
+#sectionHeroes {
+	border-bottom: solid 1px rgb(220,221,221);
+	background: rgb(246,247,250);
+}
+#sectionHeroes h1 {
+	margin-bottom: 24px;
+}
+
+/*
+ * --- STATISTICS ---
+ */
+#sectionStatistics {
+}
+#sectionStatistics h1 {
+	margin-bottom: 72px;
+}
+#sectionStatistics h2 {
+	margin-bottom: 8px;
+}
+#sectionStatistics .statsGroup {
+	width: 432px;
+}
+#sectionStatistics .stat {
+	border-bottom: solid 1px rgb(240,240,240);
+}
+#sectionStatistics .stat.last {
+	border-bottom: none;
+}
+#sectionStatistics #killCountContainer .statsGroup {
+	margin-top: 88px;
+}
+#sectionStatistics #killCountContainer .stat {
+	padding-bottom: 24px;
+	margin-bottom: 24px;
+}
+#sectionStatistics #timePlayedContainer .statsGroup {
+	margin-top: 56px;
+}
+#sectionStatistics #timePlayedContainer .stat .counter {
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	margin-right: 12px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	text-align: center;
+}
+#sectionStatistics #timePlayedContainer .stat .counter .value {
+	font-size: 24px;
+}
+#sectionStatistics #timePlayedContainer .stat .portraits {
+	display: inline-block;
+}
+#sectionStatistics #timePlayedContainer .stat .portrait {
+	float: left;
+	margin-top: 8px;
+	margin-right: 4px;
+	border-radius: 100px;
+}
+
+/*
+ * --- FALLEN HEROES ---
+ */
+#sectionFallenHeroes {
+	background: rgb(246,247,250);
+	border-top: solid 1px rgb(220,221,221);
+	border-bottom: solid 1px rgb(220,221,221);
+}
+#sectionFallenHeroes h1 {
+}
+#sectionFallenHeroes .timeline {
+	width: 900px;
+	margin: 0 auto;
+}
+
+/*
+ * --- PROGRESSION ---
+ */
+#sectionProgression {
+	background: rgb(255,255,255);
+}
+#sectionProgression .progressionGroup {
+	float: left;
+	text-align: center;
+}
+#sectionProgression .stat {
+	width: 100px;
+	text-shadow: 1px 1px 0px rgb(255,255,255);
+	display: inline-block;
+}
+#sectionProgression .stat .label {
+	color: rgb(139,139,139);
+	margin-bottom: 0px;
+}

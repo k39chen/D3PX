@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+		<title>Diablo 3 Profile X</title>
+		
+		<!-- Third-party libraries -->
+		<script type="text/javascript" src= "lib/jquery.js"></script>
+		<script type="text/javascript" src= "lib/jquery.ui.js"></script>
+		<script type="text/javascript" src= "lib/jquery.easing.js"></script>
+		<script type="text/javascript" src= "lib/sortable.js"></script>
+		<script type="text/javascript" src= "lib/FileSaver.js"></script>
+		<script type="text/javascript" src= "lib/BlobBuilder.js"></script>
+	
+		<!-- Functional scripts-->
+		<script type="text/javascript" src="js/d3.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	
+		<!-- Fonts -->
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.ui.css" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		
+	</head>
+	
+	<body>
+	
+		<div id="screenContainer">
+		
+			<!------------------------------------------------------------------------------------------------------>
+			<!------------------------------------------ SPLASH SCREEN --------------------------------------------->
+			<!------------------------------------------------------------------------------------------------------>
+			<div id="splashScreen" class="screen" value="0">
+				<div class="content">
+					<div class="caption">
+						<div class="title">Welcome to Diablo III Profile X</div>
+						<div class="text">
+							<p>Review your Diablo 3 progress and character builds with more accuracy than ever before.</p>
+							<p>Analyze Damage per Second and Effective Health Point contributions from gear, skills, and buffs.</p>
+							<p>Simply search for your BattleTag to get started.</p>
+						</div>
+						<div class="searchBar"></div>
+					</div>
+				</div>
+			</div>
+			
+			<!------------------------------------------------------------------------------------------------------>
+			<!------------------------------------------- PLAYER SCREEN -------------------------------------------->
+			<!------------------------------------------------------------------------------------------------------>
+			<div id="playerScreen" class="screen" value="1">
+				<div id="playerSectionGeneral" class="section large">
+					<div class="sectionMask"></div>
+					<div class="content">
+						<div class="header">
+							<div class="title battletag"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="playerSectionTimePlayed" class="section">
+					<div class="sectionMask"></div>
+					<div class="content">
+						<div class="header">
+							<div class="title">Time Played</div>
+						</div>
+						<div id="playTimeContainer">
+							<div class="classCrest barbarian"></div>
+							<div class="classCrest demon-hunter"></div>
+							<div class="classCrest monk"></div>
+							<div class="classCrest witch-doctor"></div>
+							<div class="classCrest wizard"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="playerSectionHeroes" class="section large">
+					<div class="sectionMask"></div>
+					<div class="content">
+						<div class="header">
+							<div class="title">Heroes</div>
+						</div>
+						<div id="heroesList">
+						</div>
+					</div>
+				</div>
+				
+				<div id="playerSectionFallenHeroes" class="section">
+					<div class="sectionMask"></div>
+					<div class="content">
+						<div class="header">
+							<div class="title">Fallen Heroes</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="playerSectionProgression" class="section">
+					<div class="sectionMask"></div>
+					<div class="content">
+						<div class="header">
+							<div class="title">Progression</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="playerSectionArtisans" class="section">
+					<div class="sectionMask"></div>
+					<div class="content">
+						<div class="header">
+							<div class="title">Artisans</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		
+			<!------------------------------------------------------------------------------------------------------>
+			<!-------------------------------------------- HERO SCREEN --------------------------------------------->
+			<!------------------------------------------------------------------------------------------------------>
+			<!--div id="heroProfile" class="screen" value="2">
+		
+				<div id="leftPanel" class="wrapper">
+					
+					<div id="stickyBottomGroup">
+						<div class="navLink" id="returnToHeroSelection"><img class="icon" src="assets/icons/back.png" /> Return to Hero Selection</div>
+					</div>
+					
+					<div class="heroShowcase">
+						<div class="heroInfo">
+							<span class="heroLevel"></span>
+							<span class="heroParagon"></span>
+							<span class="heroClass"></span>
+						</div>
+						<div class="portraitFrame">
+							<img class="portrait" src="assets/images/career-portraits.jpg" />
+							<div class="portraitMask"></div>
+						</div>
+						<div class="heroName"></div>
+					</div>
+					
+					<div id="statsReviewGroup" class="toggleGroup">
+						<div class="navLink" value="gear" default="true">
+							<img class="icon" src="assets/icons/gear.png" />
+							<span class="text">Gear</span>
+						</div>
+						<div class="navLink" value="skills">
+							<img class="icon" src="assets/icons/skills.png" />
+							<span class="text">Skills</span>
+						</div>
+						<div class="navLink" value="followers">
+							<img class="icon" src="assets/icons/followers.png" /> 
+							<span class="text">Followers</span>
+						</div>
+						<div class="navLink" value="monsters">
+							<img class="icon" src="assets/icons/monsters.png" /> 
+							<span class="text">Monsters</span>
+						</div>
+						<div class="navLink" value="shrines">
+							<img class="icon" src="assets/icons/shrines.png" /> 
+							<span class="text">Shrines</span>
+						</div>
+						<div class="navLink" value="paragon">
+							<img class="icon" src="assets/icons/paragon.png" /> 
+							<span class="text">Paragon</span>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div id="centerPanel" class="wrapper">
+					<div class="largePanelBuffer">
+						<h1 id="sectionTitle"></h1>
+						
+						<div id="sectionGear" class="section" value="gear">
+							<div class="sectionContent">
+								
+							</div>
+						</div>
+						
+						<div id="sectionSkills" class="section" value="skills">
+							<div class="sectionContent">
+							
+								<div class="skillContainer sectionBox">
+									
+									<div class="skillHeader">
+										<div class="skillIconGroup">
+											<div class="skillIconContainer"><img class="skillIcon" src="assets/skill.png" /></div>
+											<div class="skillRuneContainer"><img class="skillRune c" src="assets/runes.png" /></div>
+										</div>
+										<div class="skillNameGroup">
+											<div class="skillName">Crippling Wave</div>
+											<div class="skillRuneName">Rising Tide</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="skillContainer sectionBox">
+									
+									<div class="skillHeader">
+										<div class="skillIconGroup">
+											<div class="skillIconContainer"><img class="skillIcon" src="assets/skill.png" /></div>
+											<div class="skillRuneContainer"><img class="skillRune a" src="assets/runes.png" /></div>
+										</div>
+										<div class="skillNameGroup">
+											<div class="skillName">Crippling Wave</div>
+											<div class="skillRuneName">Tsunami</div>
+										</div>
+									</div>
+									
+								</div>
+							
+							</div>
+						</div>
+						
+						<div id="sectionFollowers" class="section" value="followers">
+							<div class="sectionContent">
+							</div>
+						</div>
+						
+						<div id="sectionMonsters" class="section" value="monsters">
+							<div class="sectionContent">
+							</div>
+						</div>
+						
+						<div id="sectionShrines" class="section" value="shrines">
+							<div class="sectionContent">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="rightPanel" class="wrapper">
+					<div id="attributesContainer"></div>
+				</div>
+				
+			</div-->
+
+		</div>
+		
+		<!------------------------------------------------------------------------------------------------------>
+		<!------------------------------------------- MODAL DIALOG --------------------------------------------->
+		<!------------------------------------------------------------------------------------------------------>
+		<div id="modalBg"></div>
+		<div id="modalDialog">
+			<div class="content">
+				<div class="header wrapper">
+					<div class="title left">Could Not Retrieve Player Profile</div>
+					<div class="icon right" src="assets/icons/close.png"></div>
+				</div>
+				<div class="text">
+					<p>
+						Unable to find a player with the BattleTag
+						<span class="battletag accent"></span> on the 
+						<span class="server highlight"></span> for any of
+						the following reasons:
+					</p>
+					<ul>
+						<li>There does not exist a player with the query specifications</li>
+						<li>The Diablo III servers in the specified region is unavailable</li>
+						<li>The internet connection is unstable or non-existent</li>
+					</ul>
+				</div>
+				<div class="buttons">
+					<button class="closeBtn">Close</button>
+				</div>
+			</div>
+		</div>
+			
+	</body>
+
+</html>

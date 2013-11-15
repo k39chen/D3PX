@@ -1,0 +1,665 @@
+/***** FONTS*****/
+@font-face { 
+	font-family: ProximaReg; 
+	font-weight: bold; 
+	src: url("../assets/fonts/ProximaNova-Regular.otf"); 
+}
+
+@font-face { 
+	font-family: ProximaLight; 
+	font-weight: bold; 
+	src: url("../assets/fonts/ProximaNova-Light.otf"); 
+}
+
+@font-face { 
+	font-family: ProximaSemibold; 
+	font-weight: bold; 
+	src: url("../assets/fonts/ProximaNova-Semibold.otf"); 
+}
+
+@font-face { 
+	font-family: Exocet; 
+	font-weight: bold; 
+	src: url("../assets/fonts/Exocet.ttf"); 
+}
+
+/***** GLOBALS *****/
+html {
+	font-size: 13px;
+	font-family: Helvetica;
+	color: rgb(200,200,200);
+	height: 100%;
+}
+body {
+	height: 100%;
+	background: rgb(250,250,250);
+	
+	overflow-x: hidden;
+}
+smaller { 
+	font-size: 0.75em; 
+}
+p { 
+	margin-bottom: 1.0em;
+}
+ul {
+	list-style: circle;
+	margin-left: 1.5em;
+	line-height: 1.3em;
+}
+button {
+	color: rgb(225,203,141);
+	border: solid 1px rgb(98,53,51);
+	background: rgb(81,20,0);
+	padding: 0.5em 1.0em;
+	margin: 0.25em 0.5em;
+	box-shadow: inset 0px -1.5em 1.5em rgba(0,0,0,0.3),
+				3px 3px 3px rgba(0,0,0,0.4);
+	cursor: pointer;
+}
+button:hover {
+	background: rgb(119,23,0);
+	border: solid 1px rgb(184,100,58);
+	color: rgb(243,230,208);
+}
+
+/***** GENERAL *****/
+.screen {
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+}
+
+/***** GENERAL: SECTION *****/
+.section {
+	position: relative;
+	height: 600px;
+}
+.section .header {
+	margin-bottom: 1.0em;
+	padding: 2.0em;
+	display: inline-block;
+	min-width: 15.0em;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.section .title {
+	font-family: Palatino Linotype;
+	font-size: 3.0em;
+	text-shadow: 2px 2px 2px rgb(0,0,0);
+}
+.section .subtitle {
+	font-family: Palatino Linotype;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-shadow: 2px 2px 0px rgb(0,0,0);
+	
+	margin-top: 0.25em;
+	padding-top: 0.5em;
+	border-top: solid 1px rgb(200,200,200);
+}
+.sectionMask {
+	width: 100%;
+	height: 100%;
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
+}
+.content {
+	width: 1100px;
+	margin: 0 auto;
+	padding: 3.0em;
+	position: relative;
+	z-index: 1000;
+}
+
+/***** GENERAL: OTHER *****/
+.ui-tooltip {
+	background: rgba(20,20,20,0.8);
+	box-shadow: 2px 2px 2px rgba(10,10,10,0.3);
+	color: rgb(169,152,119);
+	font-family: Arial;
+	font-size: 13px;
+	border: solid 1px rgb(70,52,25);
+	padding: 0.5em 1.0em;
+	border-radius: 0px;
+	line-height: 1.3em;
+}
+.heroShowcase {
+	width: 240px;
+	margin: 0em 0em;
+	padding: 2.0em 0em;
+	background: rgb(50,50,50);
+}
+.heroShowcase .heroInfo {
+	text-align: center;
+}
+.heroShowcase .heroLevel {
+	color: rgb(238,176,77);
+}
+.heroShowcase .heroParagon {
+	color: rgb(167,145,194);
+}
+.heroShowcase .heroClass {
+	color: rgb(238,176,77);
+}
+.heroShowcase .heroName {
+	font-size: 1.2em;
+	color: rgb(255,255,255);
+	text-align: center;
+}
+.portraitFrame {
+	width: 130px;
+	height: 130px;
+	overflow: hidden;
+	border-radius: 1000px;
+	margin: 0.5em auto;
+	border: solid 4px rgb(100,100,100);
+	position: relative;
+	cursor: pointer;
+}
+.portraitFrame.small {
+	width: 66px;
+	height: 66px;
+	border-width: 3px;
+}
+.portraitFrame.hardcore {
+	border: solid 4px rgb(146,29,29);
+}
+.portraitMask {
+	position: absolute; 
+	width: 130px; 
+	height: 130px; 
+	border-radius: 1000px;
+	box-shadow: inset 0px 10px 10px rgba(0,0,0,0.7);
+	
+	background: rgba(0,0,0,0.2);
+}
+.portraitFrame.hovered .portraitMask {
+	background: rgba(0,0,0,0);
+}
+.portraitFrame.small .portraitMask {
+	width: 66px;
+	height: 66px;
+}
+
+.portrait { position: absolute; }
+
+.portrait.barbarian.Male 		{margin-left: -32px; margin-top: 0px;}
+.portrait.barbarian.Female 		{margin-left: -203px; margin-top: 0px;}
+.portrait.demon-hunter.Male 	{margin-left: -29px; margin-top: -128px;}
+.portrait.demon-hunter.Female 	{margin-left: -188px; margin-top: -128px;}
+.portrait.monk.Male 			{margin-left: -30px; margin-top: -259px;}
+.portrait.monk.Female 			{margin-left: -189px; margin-top: -260px;}
+.portrait.witch-doctor.Male 	{margin-left: -25px; margin-top: -392px;}
+.portrait.witch-doctor.Female 	{margin-left: -198px; margin-top: -386px;}
+.portrait.wizard.Male 			{margin-left: -38px; margin-top: -518px;}
+.portrait.wizard.Female 		{margin-left: -193px; margin-top: -518px;}
+
+.portraitFrame.small .portrait.barbarian.Male 		{margin-left: -11px; margin-top: 0px;}
+.portraitFrame.small .portrait.barbarian.Female 	{margin-left: -92px; margin-top: 0px;}
+.portraitFrame.small .portrait.demon-hunter.Male 	{margin-left: -10px; margin-top: -66px;}
+.portraitFrame.small .portrait.demon-hunter.Female 	{margin-left: -92px; margin-top: -66px;}
+.portraitFrame.small .portrait.monk.Male 			{margin-left: -10px; margin-top: -135px;}
+.portraitFrame.small .portrait.monk.Female 			{margin-left: -92px; margin-top: -135px;}
+.portraitFrame.small .portrait.witch-doctor.Male 	{margin-left: -10px; margin-top: -203px;}
+.portraitFrame.small .portrait.witch-doctor.Female 	{margin-left: -92px; margin-top: -198px;}
+.portraitFrame.small .portrait.wizard.Male 			{margin-left: -15px; margin-top: -266px;}
+.portraitFrame.small .portrait.wizard.Female 		{margin-left: -92px; margin-top: -266px;}
+
+.caption {
+	color: rgb(0,0,0);
+	top: 40%;
+	position: absolute;
+	font-family: Palatino Linotype;
+	padding: 2.0em;
+}
+.caption .title {
+	font-size: 3.0em;
+	padding-bottom: 0.25em;
+	margin-bottom: 0.5em;
+	border-bottom: solid 1px rgb(0,0,0);
+}
+.caption .text {
+	font-size: 1.5em;
+}
+
+/***** LAYOUT *****/
+#screenContainer {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/**********************************************************************************/
+/**********************************************************************************/
+/**********************************************************************************/
+/******************************** SPLASH SCREEN ***********************************/
+/**********************************************************************************/
+/**********************************************************************************/
+/**********************************************************************************/
+
+/***** LAYOUT *****/
+#splashScreen {
+	background: url(../assets/top.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#splashScreen .content {
+	position: static;
+}
+
+/**********************************************************************************/
+/**********************************************************************************/
+/**********************************************************************************/
+/******************************** PLAYER PROFILE **********************************/
+/**********************************************************************************/
+/**********************************************************************************/
+/**********************************************************************************/
+
+/***** LAYOUT *****/
+#playerScreen {
+	background: rgb(20,20,20);
+}
+#playerScreen .section.large {
+	height: 720px;
+}
+
+/***** SECTION: GENERAL *****/
+#playerSectionGeneral {}
+#playerSectionGeneral .sectionMask {
+	background: url(../assets/screens/playerGeneral.jpg);
+	background-position: center 30%;
+}
+
+/***** SECTION: TIME PLAYED *****/
+#playerSectionTimePlayed {}
+#playerSectionTimePlayed .sectionMask {
+	background: url(../assets/screens/playerTimePlayed.jpg);
+	background-position: center 16%;
+}
+#playerSectionTimePlayed #playTimeContainer {
+	margin: 0 auto;
+	width: 1064px;
+	margin-top: 120px;
+}
+#playerSectionTimePlayed .classCrest {
+	margin-left: -15px;
+}
+
+/***** SECTION: HEROES *****/
+#playerSectionHeroes {}
+#playerSectionHeroes .sectionMask {
+	background: url(../assets/images/classes/monk/splash_0.jpg);
+}
+
+/***** SECTION: FALLEN HEROES *****/
+#playerSectionFallenHeroes {}
+#playerSectionFallenHeroes .sectionMask {
+	background: url(../assets/screens/fallenHeroes.jpg);
+	background-position: center bottom;
+}
+
+/***** SECTION: PROGRESSION *****/
+#playerSectionProgression {}
+#playerSectionProgression .sectionMask {
+	background: url(../assets/acts/1.jpg);
+	background-position: center 50%;
+}
+
+/***** SECTION: ARTISANS *****/
+#playerSectionArtisans {}
+
+
+
+/***** SECTION: ADDITIONAL STYLES *****/
+#playerScreen .sectionMask {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/**********************************************************************************/
+/**********************************************************************************/
+/**********************************************************************************/
+/********************************** HERO PROFILE **********************************/
+/**********************************************************************************/
+/**********************************************************************************/
+/**********************************************************************************/
+
+/***** LAYOUT *****/
+#heroProfile #leftPanel {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 240px;
+	height: 100%;
+	background: rgb(50,50,50);
+	border-right: solid 1px rgb(40,40,40);
+}
+#heroProfile #centerPanel {
+	margin-left: 240px;
+	overflow: auto;
+}
+#heroProfile #rightPanel {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 360px;
+	height: 100%;
+	background: rgb(50,50,50);
+	overflow: auto;
+	box-shadow: inset 10px 0px 10px rgba(20,20,20,0.5);
+}
+
+/***** LEFT PANEL *****/
+#heroProfile #leftPanel .navLink {
+	color: rgb(200,200,200);
+	cursor: pointer;
+	padding: 1.0em;
+	border-bottom: solid 1px rgb(30,30,30);
+	border-top: solid 1px rgb(60,60,60);
+}
+#heroProfile #leftPanel .navLink.hovered {
+	background: rgb(80,80,80);
+}
+#heroProfile #leftPanel .navLink.selected {
+	color: rgb(255,255,255);
+	background: rgb(30,30,30);
+	border-top: solid 1px rgb(20,20,20);
+}
+
+/***** CENTER PANEL *****/
+#heroProfile #centerPanel #sectionTitle {
+	font-size: 1.0em;
+	margin-bottom: 0.5em;
+}
+#heroProfile #centerPanel .sectionContent {
+	overflow: hidden;
+	padding: 1.0em 0em;
+}
+#heroProfile #centerPanel .sectionBox {
+	background: rgb(40,40,40);
+	border: solid 1px rgb(30,30,30);
+	border-top: solid 4px rgb(236,100,100);
+	/*
+	box-shadow: 3px 3px 3px rgba(200,200,200,0.2);
+	*/
+}
+
+/***** CENTER PANEL: GEAR *****/
+.paperDoll {
+	background: url(../assets/images/classes/monk/doll_1.jpg) 50% 50% no-repeat;
+	width: 339px;
+	height: 456px;
+	margin: 0em auto;
+	padding: 1.0em;
+}
+
+/***** CENTER PANEL: SKILLS *****/
+.skillContainer {
+	width: 220px;
+	padding: 1.0em;
+	position: relative;
+	float: left;
+	margin-right: 1.0em;
+}
+.skillHeader {
+	overflow: hidden;
+}
+.skillIconGroup {
+	float: left;
+	margin-right: 1.7em;
+}
+.skillIconContainer {
+	width: 53px;
+	height: 53px;
+	overflow: hidden;
+	border-radius: 1000px;
+}
+.skillIcon {
+	margin-top: -6px;
+	margin-left: -6px;
+}
+.skillRuneContainer {
+	position: absolute;
+	top: 31px;
+	left: 42px;
+	width: 42px;
+	height: 42px;
+	overflow: hidden;
+}
+.skillRune.a {margin-left: -0px;}
+.skillRune.b {margin-left: -42px;}
+.skillRune.c {margin-left: -84px;}
+.skillRune.d {margin-left: -106px;}
+.skillRune.e {margin-left: -148px;}
+
+.skillNameGroup {
+	float: left;
+	margin-top: 0.6em;
+}
+.skillName {
+	font-size: 1.3em;
+}
+.skillRuneName {
+	border-top: solid 1px rgb(200,200,200);
+	margin-top: 0.2em;
+	padding-top: 0.3em;
+	color: rgb(238,176,77);
+}
+
+/***** RIGHT PANEL *****/
+#heroProfile #rightPanel .attributeSection {
+}
+#heroProfile #rightPanel .attributeSectionName {
+	color: rgb(255,255,255);
+	padding: 1.0em 1.25em;
+	border-bottom: solid 1px rgb(30,30,30);
+	border-top: solid 1px rgb(60,60,60);
+}
+#heroProfile #rightPanel .attributeSectionName .text {
+	margin-top: 0.25em;
+}
+#heroProfile #rightPanel .attributeSectionName .icon {
+	margin-right: 0.5em;
+}
+#heroProfile #rightPanel .attributeField {
+	cursor: pointer;
+	line-height: 1.2em;
+	padding: 0.5em 1.0em;
+	background: rgb(30,30,30);
+}
+#heroProfile #rightPanel .attributeField .text { color: rgb(120,120,120); }
+#heroProfile #rightPanel .attributeField .number { color: rgb(150,150,150); }
+#heroProfile #rightPanel .attributeField.hovered { background: rgb(40,40,40); } 
+#heroProfile #rightPanel .attributeField.hovered .text { color: rgb(238,176,77); }
+#heroProfile #rightPanel .attributeField.hovered .number { color: rgb(255,255,255); }
+
+/***** MACROS *****/
+.wrapper { overflow: hidden; }
+.left { float: left; }
+.right { float: right; }
+.block { display: block; }
+.textCenter { text-align: center; }
+.textLeft { text-align: left; }
+.textRight { text-align: right; }
+.panelBuffer { margin: 2.0em; }
+.largePanelBuffer { margin: 2.5em 4.0em; }
+.linebreak { border-bottom: solid 1px rgb(220,220,220); }
+.accent { color: rgb(255,255,255); }
+.highlight { color: rgb(238,176,77); }
+.hardcore { color: rgb(146,29,29); }
+
+
+/***** WIDGET: SEARCHBAR *****/
+.searchBar {
+	overflow: hidden;
+	display: inline-block;
+	background: rgb(60,60,60);
+	padding: 0.5em 1.0em;
+}
+.searchBar .icon {
+	float: left;
+	margin-right: 1.0em;
+	margin-top: 3px;
+	width: 16px;
+	height: 16px;
+}
+.searchBar .loader {
+	float: left;
+	margin-top: 3px;
+	width: 16px;
+	height: 16px;
+	margin-right: 1.0em;
+}
+.searchBar .battletag {
+	float: left;
+	width: 192px;
+	margin-top: 2px;
+	border-radius: 10000px;
+	background: none;
+	border: none;
+	color: rgb(255,255,255);
+	font-size: 1.0em;
+	outline: none;
+	margin-right: 0.5em;
+}
+.searchBar .battletag::-webkit-input-placeholder {
+   color: rgb(200,200,200);
+}
+.searchBar .server {
+	float: left;
+	cursor: pointer;
+	margin-top: 2px;
+	padding: 0.25em 0.5em;
+	color: rgb(240,240,240);
+	background: rgb(224,142,11);
+	
+	width: 1.5em;
+	text-align: center;
+	
+	font-family: Arial;
+}
+.searchBar .server.hovered {
+	color: rgb(255,255,255);
+	background: rgb(236,176,78);
+}
+.miniMenu {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	background: rgb(50,50,50);
+	border: solid 1px rgb(90,74,47);
+	color: rgb(238,176,77);
+}
+.miniMenu .item {
+	cursor: pointer;
+	padding: 0.25em 0.5em;
+	
+	width: 1.5em;
+	text-align: center;
+}
+.miniMenu .item.hovered {
+	background: rgb(130,130,130);
+	color: rgb(255,255,255);
+}
+
+/***** WIDGET: ICON *****/
+.icon {
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+	position: relative;
+}
+.icon img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+/***** WIDGET: MODALDIALOG *****/
+#modalBg {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	top: 0px;
+	position: absolute;
+}
+#modalDialog {
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+	position: fixed;
+	top: 300px;
+	left: 0px;
+	color: rgb(200,200,200);
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
+}
+#modalDialog .header {
+	border-bottom: solid 1px rgb(60,60,60);
+	padding-bottom: 0.5em;
+	margin-bottom: 1.0em;
+}
+#modalDialog .icon {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+#modalDialog .title {
+	font-size: 1.5em;
+}
+#modalDialog .text {
+	border-bottom: solid 1px rgb(60,60,60);
+	color: rgb(150,150,150);
+	padding-bottom: 1.0em;
+	margin-bottom: 1.0em;
+}
+#modalDialog .buttons {
+	text-align: center;
+}
+
+/***** WIDGET: CLASSCREST *****/
+.classCrest {
+	display: inline-block;
+	margin-right: -10px;
+}
+.classCrest .crest {
+	width: 230px;
+}
+.classCrest .textContainer {
+	width: 200px;
+	height: 21px;
+	margin: 0 auto;
+	margin-top: -67px;
+	position: relative;
+	
+	text-align: center;
+	font-family: Exocet;
+	color: rgb(255,255,255);
+}
+.classCrest .textContainer .glow {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.classCrest .textContainer .text {
+	position: absolute;
+	width: 200px;
+	top: -6px;
+	left: 0px;
+	font-size: 1.6em;
+}
+.classCrest .textContainer .caption {
+	position: absolute;
+	width: 200px;
+	top: 40px;
+	left: 0px;
+	padding: 0em;
+	
+	font-family: Exocet;
+	font-size: 2.5em;
+	color: rgb(255,255,255);
+	text-align: center;
+}

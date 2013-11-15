@@ -1,0 +1,9 @@
+.wrapper { overflow: hidden; }
+.left { float: left; }
+.right { float: right; }
+
+.tleft { text-align: left; }
+.tcenter { text-align: center; }
+.tright { text-align: right; }
+
+.vspace { height: 16px; display: block; }

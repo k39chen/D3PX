@@ -1,0 +1,64 @@
+.searchBar {
+	float: right;
+	border: solid 1px rgb(220,220,220);
+	padding-left: 6px;
+	overflow: hidden;
+	background: rgb(255,255,255);
+}
+.searchBar .icon {
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.searchBar .battletag {
+	width: 192px;
+	margin-top: 3px;
+	border: none;
+	outline: none;
+	font-family: HelveticaNeue;
+	font-size: 15px;
+	float: left;
+	background: none;
+}
+.searchBar .battletag::-webkit-input-placeholder {
+   color: rgb(200,200,200);
+}
+.searchBar .server {
+	float: left;
+	width: 35px;
+	margin-right: 3px;
+}
+
+/***** WIDGET: SEARCHBAR *****/
+.searchBar .loader {
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+
+.miniMenu {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	background: rgb(255,255,255);
+	border: solid 1px rgb(200,200,200);
+	color: rgb(150,150,150);
+	margin-left: 2px;
+}
+.miniMenu .item {
+	cursor: pointer;
+	width: 32px;
+	text-align: center;
+	padding: 2px 0px;
+	font-family: HelveticaNeueLt;
+	font-size: 14px;
+}
+.miniMenu .item.hovered {
+	background: rgb(230,230,230);
+	color: rgb(150,150,150);
+}
